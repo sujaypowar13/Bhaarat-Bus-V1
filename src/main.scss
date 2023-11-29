@@ -19,7 +19,7 @@
 }
 
 :root {
-  --PrimaryColor: rgb(61, 92, 184);
+  --PrimaryColor: #3d5cb8;
   --SecondaryColor: hsl(180, 17%, 95%);
   --colorOne: hsl(15, 74%, 70%);
   --colorTwo: hsl(28, 100%, 82%);
@@ -884,8 +884,8 @@ h2 {
 
   //home section only
   .home {
-    padding-top: 10%;
-    padding-bottom: 0%;
+    padding-top: 0%;
+    padding-bottom: 8%;
     h4 {
       padding-top: 0%;
       font-size: large;
@@ -912,6 +912,29 @@ h2 {
         position: absolute;
         width: 100%;
         top: -3%;
+      }
+    }
+  }
+
+  //search styling
+  .search {
+    padding-top: 10%;
+    .sectionContainer {
+      .btns {
+        width: 30%;
+        border-radius: 3rem;
+        flex-direction: row;
+      }
+      .searchInputs {
+        grid-template-columns: repeat(4, 1fr);
+
+        .singleInput {
+          .texts {
+            input {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }

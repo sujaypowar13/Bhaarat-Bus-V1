@@ -1,0 +1,119 @@
+/* Add this CSS to your UserStyle.css file or your component */
+.Section {
+  padding-top: 5%;
+}
+
+.Container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(45deg, #ebf3f5, #3d5cb8);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  color: #000000;
+  font-family: "Arial", sans-serif; /* Example font family */
+  font-size: 16px;
+}
+
+input,
+select {
+  padding: 10px;
+  margin-bottom: 16px;
+  margin-left: 20px; 
+
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  outline: none;
+  font-family: "Arial", sans-serif; /* Example font family */
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input:focus,
+select:focus {
+  background-color: #fff;
+  font-family: "Arial", sans-serif; /* Example font family */
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-family: "Arial", sans-serif; /* Example font family */
+  font-size: 12px;
+}
+
+button {
+  background-color: #2a55a5;
+  color: white;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-family: "Arial", sans-serif; /* Example font family */
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #56c24c;
+  font-weight: 500;
+}
+
+option {
+  font-family: "Arial", sans-serif;
+}
+
+/* confirm data styling */
+.Confirm_Button {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(45deg, #fafafa, #264dc1);
+  border-radius: 4rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #fff;
+}
+
+.Confirm_Button h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.Confirm_Button p {
+  margin-bottom: 10px;
+  color: #000000;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.Confirm_Button button {
+  background-color: #3270c7;
+  color: white;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.Confirm_Button button:hover {
+  background-color: #45a049;
+}

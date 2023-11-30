@@ -12,15 +12,18 @@ import BookingForm from "./Components/BookingForm/BookingForm";
 import RegisterUserForm from "./Components/RegisterUserForm/RegisterUserForm";
 import BusReserve from "./Components/BusReserve/BusReserve";
 import SelectPlan from "./Components/SelectPlan/SelectPlan";
+import Test from "./Components/Test/Test";
 
 const App = () => {
   return (
     <AuthProvider>
       <div>
-        User Registration form Component
+        <Test/>
         <RegisterUserForm />
         {/* Uncomment and add other components when needed */}
         {/*
+        User Registration form Component
+        <RegisterUserForm />
         Bus Registration form Component
         <SelectPlan/>
         <BookingForm />

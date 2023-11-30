@@ -14,6 +14,7 @@ import BusReserve from "./Components/BusReserve/BusReserve";
 import SoonApp from "./Components/SoonApp/SoonApp";
 import Footer from "./Components/Footer/Footer";
 import Info from "./Components/Info/Info";
+import Test from "./Components/Test/Test";
 
 const App = () => {
   return (
@@ -23,23 +24,34 @@ const App = () => {
         {/* <RegisterUserForm /> */}
         {/* Uncomment and add other components when needed */}
             
-        {/* <BookingForm /> */}
+        {/* {/* <BookingForm /> 
+        <Test/>
+        <RegisterUserForm /> */}
+        {/* Uncomment and add other components when needed */}
+        
+        {/* User Registration form Component
         <RegisterUserForm />
-        <BusReserve />
+        Bus Registration form Component
+        <SelectPlan/>
+        <BookingForm />
+        User Registration form Component
+       <RegisterUserForm />
+        <BusReserve /> */}
         <Navbar />
         <Search />
         <Home />
-        {/* <UserForm /> */}
         <Support />
         <SoonApp />
         <MyAC />
         <Footer />
+        {/* <UserForm /> 
+  
         
         <Info />
         {/* <Subs /> */}
-        {/* <Travellers /> */}
-        <Login1 />
-        <Signup />
+        {/* <Travellers />  */}
+        {/* <Login1 />
+        <Signup /> */}
         
       </div>
     </AuthProvider>

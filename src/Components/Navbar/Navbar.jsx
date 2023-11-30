@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+
+import { Link } from 'react-router-dom';
 //imported icons
 import { SiConsul } from "react-icons/si";
 import { BsPhoneVibrateFill } from "react-icons/bs";
@@ -8,12 +10,13 @@ import { CgMenuGridO } from "react-icons/cg";
 
 //imported images
 import logo from "..//..//assets/adidas1.png";
+import Profile from "..//..//assets/profile.png";
 
 import imageToShow from "..//../assets/p2.png";
 
 const Navbar = () => {
   //lets remove navbar in the small screen device
-
+  const [isLoggedIn, setIsLogedIn] = useState(false);
   const [active, setActive] = useState("navBarMenu");
   const showNavBar = () => {
     setActive("navBarMenu showNavBar");
@@ -36,7 +39,7 @@ const Navbar = () => {
 
   return (
     <div className="navBar flex">
-      <div className="navBarOne flex">
+      {/* <div className="navBarOne flex">
         <div>
           <SiConsul className="icon" />
         </div>
@@ -55,38 +58,74 @@ const Navbar = () => {
           <span>Find my route</span>
           <span>Register for bus</span>
         </div>
-      </div>
+      </div> */}
 
       <div className={noBg}>
-        <div className="logoDiv">
+        <div className="logoDiv flex">
           <img src={logo} className="Logo" />
+          <h1>Bharat Bus</h1>
         </div>
+{
+  isLoggedIn ? (        <div className={active}>
+    <ul className="menu flex">
+      <li onClick={removeNavBar} className="listItem">
+        Home
+      </li>
+      <li onClick={removeNavBar} className="listItem">
+        About
+      </li>
+      <li onClick={removeNavBar} className="listItem">
+        Services
+      </li>
+      <li onClick={removeNavBar} className="listItem">
+        Plan
+      </li>
+      <li onClick={removeNavBar} className="listItem">
+        rides
+      </li>
+      <li onClick={removeNavBar} className="listItem">
+        Support
+      </li>
+      <li>
+        <img src={Profile} alt="profile" className="profile" />
+      </li>
+    </ul>
+{/* 
+    <button onClick={removeNavBar} className="btn flex btnOne">
+      Contact
+    </button> */}
+  </div>):(
+            <div className={active}>
+            <ul className="menu flex">
+              <li onClick={removeNavBar} className="listItem">
+                Home
+              </li>
+              <li onClick={removeNavBar} className="listItem">
+                About
+              </li>
+              <li onClick={removeNavBar} className="listItem">
+                Services
+              </li>
+              <li onClick={removeNavBar} className="listItem">
+                Testimonial
+              </li>
+              <li onClick={removeNavBar} className="listItem">
+                Contact
+              </li>
+              <li>
+              <Link to="/signup" className="btn btn-primary">Book a Ride</Link>
+              </li>
+            </ul>
+  {/* 
+            <button onClick={removeNavBar} className="btn flex btnOne">
+              Contact
+            </button> */}
+          </div>
+  )
+}
 
-        <div className={active}>
-          <ul className="menu flex">
-            <li onClick={removeNavBar} className="listItem">
-              Home
-            </li>
-            <li onClick={removeNavBar} className="listItem">
-              About
-            </li>
-            <li onClick={removeNavBar} className="listItem">
-              Offers
-            </li>
-            <li onClick={removeNavBar} className="listItem">
-              Seats
-            </li>
-            <li onClick={removeNavBar} className="listItem">
-              Destinations
-            </li>
-          </ul>
 
-          <button onClick={removeNavBar} className="btn flex btnOne">
-            Contact
-          </button>
-        </div>
-
-        <button className="btn flex btnTwo">Contact</button>
+        {/* <button className="btn flex btnTwo">Contact</button> */}
 
         <div onClick={showNavBar} className="toggleIcon">
           <CgMenuGridO />

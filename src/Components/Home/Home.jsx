@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <div className="home flex container">
       <div>
-        <div className="space">Bhaarat Bus</div>
+        <div className="space ">Bhaarat Bus</div>
         <h4>
-          We make your ride to work stress-free, Comfortable, express bus rides
+          We make your ride to work <br /> stress-free, Comfortable, express bus rides
           from your home to office
         </h4>
       </div>

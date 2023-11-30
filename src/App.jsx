@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
-import Search from "./Components/Search/Search";
 import Login1 from "./Components/Login/Loginr";
 import Signup from "./Components/Login/Signup";
 import Home from "./Components/Home/Home";
@@ -20,6 +19,7 @@ const App = () => {
   return (
     <AuthProvider>
       <div>
+        
         {/* User Registration form Component */}
         {/* <RegisterUserForm /> */}
         {/* Uncomment and add other components when needed */}
@@ -38,8 +38,8 @@ const App = () => {
        <RegisterUserForm />
         <BusReserve /> */}
         <Navbar />
-        <Search />
         <Home />
+
         <Support />
         <SoonApp />
         <MyAC />

@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import axios from 'axios';
 
 const RegisterUserForm = () => {
   const [name, setName] = useState("");
@@ -13,7 +14,13 @@ const RegisterUserForm = () => {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    try {
+      const response = await axios.post('http://localhost:9000/api/register', {name, email, contactNumber, gender, city, password, confirmPassword});
+      console.log("🚀 ~ file: RegisterUserForm.jsx:20 ~ handleSubmit ~ response:", response)
+    } catch (error) {
+      console.log('aaaaaaaaaaaaa', error);
+    }
     e.preventDefault();
 
     const validationErrors = validateForm();

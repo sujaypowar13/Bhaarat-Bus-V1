@@ -1,0 +1,114 @@
+/* Add this CSS to your stylesheet or component style */
+.Section {
+  padding-top: 10%;
+}
+.SelectPlan {
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.TripTypeButtons button {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4rem;
+  background-color: #3498db;
+  color: #fff;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.TripTypeButtons button:hover {
+  background-color: #2980b9;
+}
+
+.PlanBoxes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.PlanBox {
+  flex-grow: 1;
+
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #f00b0b;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.PlanBox.visible {
+  background-color: #f5f5f5;
+}
+
+.PlanBox h3 {
+  font-size: 1.2em;
+  color: #000000;
+}
+
+.PlanBox p {
+  margin: 10px 0;
+  color: #777;
+}
+
+.PlanBox button {
+  font-size: 1em;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4rem;
+  background-color: #2ecc71;
+  color: #fff;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.PlanBox button:disabled {
+  background-color: #27ae60;
+  cursor: not-allowed;
+}
+
+.PlanBox button:hover:enabled {
+  background-color: #43534a;
+}
+
+.ProceedButton {
+  margin-top: 20px;
+}
+
+.ProceedButton button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4rem;
+  background-color: #a03ce7;
+  color: #fff;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.ProceedButton button:disabled {
+  background-color: #ffffff;
+  cursor: not-allowed;
+}
+
+.ProceedButton button:hover:enabled {
+  background-color: #2bc037;
+}

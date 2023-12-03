@@ -10,7 +10,7 @@ import { CgMenuGridO } from "react-icons/cg";
 
 //imported images
 import logo from "..//..//assets/adidas1.png";
-import Profile from "..//..//assets/profile.png";
+import Profile from "..//..//assets/bus1.png";
 
 import imageToShow from "..//../assets/p2.png";
 
@@ -63,7 +63,7 @@ const Navbar = () => {
       <div className={noBg}>
         <div className="logoDiv flex">
           <img src={logo} className="Logo" />
-          <h1>Bharat Bus</h1>
+          <h1>Bhaarat Bus</h1>
         </div>
 {
   isLoggedIn ? (        <div className={active}>

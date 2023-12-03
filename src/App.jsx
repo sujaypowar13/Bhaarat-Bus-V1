@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
-import Login1 from "./Components/Login/Loginr";
+import Login from "./Components/Login/Loginr";
 import Signup from "./Components/Login/Signup";
 import Home from "./Components/Home/Home";
 import MyAC from "./Components/Login/MyAccount";
@@ -14,45 +14,35 @@ import SoonApp from "./Components/SoonApp/SoonApp";
 import Footer from "./Components/Footer/Footer";
 import Info from "./Components/Info/Info";
 import Test from "./Components/Test/Test";
+import UI from "./Components/UIX/UI";
+import SelectPlan from "./Components/SelectPlan/SelectPlan";
 
 const App = () => {
   return (
     <AuthProvider>
       <div>
-        
-        {/* User Registration form Component */}
-        {/* <RegisterUserForm /> */}
-        {/* Uncomment and add other components when needed */}
-            
-        {/* {/* <BookingForm /> 
-        <Test/>
-        <RegisterUserForm /> */}
-        {/* Uncomment and add other components when needed */}
-        
-        {/* User Registration form Component
-        <RegisterUserForm />
-        Bus Registration form Component
-        <SelectPlan/>
-        <BookingForm />
-        User Registration form Component
-       <RegisterUserForm />
-        <BusReserve /> */}
         <Navbar />
         <Home />
-
         <Support />
         <SoonApp />
-        <MyAC />
         <Footer />
-        {/* <UserForm /> 
-  
+
+        {/* {/* 
         
+        <Login />
+        <Test />
+        <UI/>
+        <SelectPlan />
+        
+        <RegisterUserForm />
+        <BusReserve />
+        <BookingForm /> 
+        
+        <UserForm /> 
         <Info />
-        {/* <Subs /> */}
-        {/* <Travellers />  */}
-        {/* <Login1 />
-        <Signup /> */}
         
+        <Signup />
+        <MyAC /> */}
       </div>
     </AuthProvider>
   );

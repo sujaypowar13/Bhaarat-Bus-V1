@@ -73,7 +73,7 @@ const isAuthenticated = () => {
           <h1>Bhaarat Bus</h1>
         </div>
 
-        <div className={active}>
+        {/* <div className={active}>
           <ul className="menu flex">
             <li onClick={removeNavBar} className="listItem">
               Home
@@ -95,7 +95,7 @@ const isAuthenticated = () => {
           <button onClick={removeNavBar} className="btn flex btnOne">
             Contact
           </button>
-        </div>
+        </div> */}
 
         <button className="btn flex btnTwo">Contact</button>
 

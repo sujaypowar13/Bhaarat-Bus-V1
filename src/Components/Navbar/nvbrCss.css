@@ -9,6 +9,11 @@
 .icon {
   margin-right: 5px;
 }
+h1{
+  color: black;
+  margin-left: 5%;
+  font-size: larger;
+}
 
 /* Navbar container */
 .navBar {

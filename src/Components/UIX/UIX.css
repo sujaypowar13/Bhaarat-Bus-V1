@@ -1,0 +1,104 @@
+/* UIX.css */
+
+/* General Styles */
+.app-container {
+  margin: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content p {
+  padding: 10px;
+}
+
+/* Account Section Styles */
+.account-section {
+  margin: 20px 0;
+}
+
+/* Change Info Section Styles */
+.change-info-section {
+  margin: 20px 0;
+}
+
+/* Past Details Section Styles */
+.past-details-section {
+  margin: 20px 0;
+}
+
+.past-details-list {
+  list-style: none;
+  padding: 0;
+}
+
+.past-details-item {
+  margin-bottom: 10px;
+}
+
+/* User Form Section Styles */
+.user-form-section {
+  margin: 20px 0;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Input Styles */
+label {
+  margin-bottom: 10px;
+}
+
+input,
+select,
+button {
+  margin-bottom: 15px;
+  padding: 8px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}

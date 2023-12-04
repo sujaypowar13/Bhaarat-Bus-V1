@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "axios": "^1.6.2",
     "nodemon": "^3.0.1",
+    "pg": "^8.11.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
@@ -29,5 +31,6 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "sass": "^1.69.5",
     "vite": "^4.4.5"
-  }
+  },
+  "proxy": "http://localhost:9000"
 }

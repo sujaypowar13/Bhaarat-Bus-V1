@@ -2,11 +2,15 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "react-modal";
+<<<<<<< HEAD
+=======
+import axios from "axios";
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
 import "./TestStyle.css";
 
 const Test = () => {
   const [name, setName] = useState("");
-  const [contactNumber, setContactNumber] = useState("");
+  const [number, setnumber] = useState("");
   const [gender, setGender] = useState("");
   const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
@@ -15,6 +19,15 @@ const Test = () => {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [isConfirmModalOpen, setConfirmModalOpen] = useState(false);
+  const [user, setUser] = useState({
+    email: "",
+    gender: "",
+    location: "",
+    name: "",
+    number: "",
+    password: "",
+    user_id: '',
+  });
 
   const openConfirmModal = () => setConfirmModalOpen(true);
   const closeConfirmModal = () => setConfirmModalOpen(false);
@@ -38,9 +51,26 @@ const Test = () => {
     return errors;
   };
 
+  const signupUser = async () => {
+    try {
+      const response = await axios.post("http://localhost:9000/api/register", {
+        name,
+        email,
+        number,
+        gender,
+        city,
+        password,
+        confirmPassword: password,
+      });
+      setUser(response.data.data.user);
+    } catch (error) {
+      console.log("aaaaaaaaaaaaa", error);
+    }
+  };
+
   const resetForm = () => {
     setName("");
-    setContactNumber("");
+    setnumber("");
     setGender("");
     setEmail("");
     setCity("");
@@ -57,7 +87,11 @@ const Test = () => {
         {submitted ? (
           <ConfirmationScreen
             name={name}
+<<<<<<< HEAD
             contactNumber={contactNumber}
+=======
+            number={number}
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
             gender={gender}
             email={email}
             city={city}
@@ -82,6 +116,7 @@ const Test = () => {
               Contact Number:
               <input
                 type="tel"
+<<<<<<< HEAD
                 value={contactNumber}
                 pattern="[0-9]{10}"
                 maxLength="10"
@@ -91,6 +126,15 @@ const Test = () => {
               {errors.contactNumber && (
                 <p className="error">{errors.contactNumber}</p>
               )}
+=======
+                value={number}
+                pattern="[0-9]{10}"
+                maxLength="10"
+                onChange={(e) => setnumber(e.target.value)}
+                required
+              />
+              {errors.number && <p className="error">{errors.number}</p>}
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
             </label>
 
             <label>
@@ -165,13 +209,17 @@ const Test = () => {
         >
           <h2>Confirm Your Details</h2>
           <p>Name: {name}</p>
-          <p>Contact Number: {contactNumber}</p>
+          <p>Contact Number: {number}</p>
           <p>Gender: {gender}</p>
           <p>Email: {email}</p>
           <p>City: {city}</p>
           {/* Include additional details as needed */}
           <button
             onClick={() => {
+<<<<<<< HEAD
+=======
+              signupUser();
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
               setSubmitted(true);
               closeConfirmModal();
             }}
@@ -185,9 +233,15 @@ const Test = () => {
   );
 };
 
+<<<<<<< HEAD
 const ConfirmationScreen = ({
   name,
   contactNumber,
+=======
+export const ConfirmationScreen = ({
+  name,
+  number,
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
   gender,
   email,
   city,
@@ -218,7 +272,11 @@ const ConfirmationScreen = ({
       </h5>
       <div className="Confirmation_Details">
         <div className="UserDataFilled">
+<<<<<<< HEAD
           <p>Contact Number: {contactNumber}</p>
+=======
+          <p>Contact Number: {number}</p>
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
           <p>Gender: {gender}</p>
           <p>Email: {email}</p>
           <p>City: {city}</p>
@@ -271,7 +329,11 @@ MobileMenu.propTypes = {
 
 ConfirmationScreen.propTypes = {
   name: PropTypes.string.isRequired,
+<<<<<<< HEAD
   contactNumber: PropTypes.string.isRequired,
+=======
+  number: PropTypes.string.isRequired,
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
   gender: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,

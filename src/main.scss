@@ -572,6 +572,7 @@ h2 {
   border-radius: 10rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
   transition: background-color 0.3s ease, transform 0.3s ease;
+<<<<<<< HEAD
   cursor: pointer;
   letter-spacing: 15px;
 }
@@ -582,6 +583,18 @@ h2 {
   transform: scale(1.05); /* Add a slight scale effect for interaction */
 }
 
+=======
+
+  letter-spacing: 15px;
+}
+
+/* Add a hover effect */
+.app_soon:hover {
+  background-color: #2980b9; /* Change the background color on hover */
+  transform: scale(1.05); /* Add a slight scale effect for interaction */
+}
+
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
 /* Responsive styles */
 @media only screen and (max-width: 768px) {
   .app_soon {
@@ -596,7 +609,10 @@ h2 {
     position: fixed;
     flex-direction: column;
     width: 100%;
+<<<<<<< HEAD
     padding-bottom: 15%;
+=======
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
   }
 
   //home section only
@@ -625,8 +641,13 @@ h2 {
   //footer section styling
 
   .entireFooter {
+<<<<<<< HEAD
     margin: auto;
     width: auto;
+=======
+    margin-left: 0%;
+    width: 450px;
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
     padding: 0%;
   }
   .footer {
@@ -634,7 +655,10 @@ h2 {
       align-items: start;
       grid-template-columns: repeat(1, 1fr);
       padding: 0%;
+<<<<<<< HEAD
       margin: auto;
+=======
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
       .footerLinks {
         justify-content: center;
         margin-left: 0%;
@@ -894,7 +918,11 @@ h2 {
         // gap: 0.7rem;
 
         .listItem {
+<<<<<<< HEAD
           // margin-right: 2rem;
+=======
+          margin-right: -1rem;
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
           padding: 0.5rem;
           font-size: 14px;
           cursor: pointer;

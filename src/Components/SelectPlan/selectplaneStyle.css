@@ -1,6 +1,6 @@
 /* Add this CSS to your stylesheet or component style */
-.Section{
-    padding-top: 10%;
+.Section {
+  padding-top: 10%;
 }
 .SelectPlan {
   width: 300px;
@@ -44,7 +44,7 @@ h2 {
 
 .PlanBox {
   flex-grow: 1;
-  
+
   padding: 10px;
   background-color: #fff;
   border: 1px solid #f00b0b;

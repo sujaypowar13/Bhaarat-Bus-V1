@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint-disable no-unused-vars */
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
@@ -15,9 +16,18 @@ import SelectPlan from "./Components/SelectPlan/SelectPlan";
 import Test from "./Components/Test/Test";
 import Footer from "./Components/Footer/Footer";
 import SoonApp from "./Components/SoonApp/SoonApp";
+=======
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
+import Signup from './Components/Login/Signup';
+import Booking from './Components/BookingForm/BookingForm';
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
 
-const App = () => {
+function App() {
   return (
+<<<<<<< HEAD
     <AuthProvider>
       <div>
         <Navbar />
@@ -52,9 +62,19 @@ const App = () => {
         <Login1 />
         <Signup />
          */}
+=======
+    <Router>
+      <div className="App">
+        <Routes>
+        <Route exact path="/" element={<Home/>} />
+          <Route exact path="/login" element={<Login/>} />
+          <Route exact path="/signup" element={<Signup/>} />
+          <Route exact path="/booking" element={<Booking/>} />
+        </Routes>
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
       </div>
-    </AuthProvider>
+    </Router>
   );
-};
+}
 
 export default App;

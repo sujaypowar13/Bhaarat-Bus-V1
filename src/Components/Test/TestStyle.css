@@ -2,6 +2,13 @@
 /* Add your existing styles here */
 
 /* Responsive styles */
+<<<<<<< HEAD
+=======
+
+.Section{
+    padding: 25PX 0 60px 0;
+}
+>>>>>>> 0bfd5974ae67610230abfb42f799c110afc8ae43
 .Container {
   border-radius: 0rem;
   max-width: 450px;

@@ -1,59 +1,23 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./Components/Navbar/Navbar";
-import Login from "./Components/Login/Loginr";
-import Signup from "./Components/Login/Signup";
-import Home from "./Components/Home/Home";
-import MyAC from "./Components/Login/MyAccount";
-import { AuthProvider } from "../src/Components/Login/AuthContext";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Support from "./Components/Support/Support";
-import BookingForm from "./Components/BookingForm/BookingForm";
-import RegisterUserForm from "./Components/RegisterUserForm/RegisterUserForm";
-import BusReserve from "./Components/BusReserve/BusReserve";
-import SoonApp from "./Components/SoonApp/SoonApp";
-import Footer from "./Components/Footer/Footer";
-import Info from "./Components/Info/Info";
-import Test, { ConfirmationScreen } from "./Components/Test/Test";
-import UI from "./Components/UIX/UI";
-import SelectPlan from "./Components/SelectPlan/SelectPlan";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
+import Signup from './Components/Login/Signup';
+import Booking from './Components/BookingForm/BookingForm';
 
-const App = () => {
+function App() {
   return (
-    <AuthProvider>
-      <div>
-        {/* <Router>
-            <Route exact path="/profile" element={<ConfirmationScreen />} />
-        </Router> */}
-        {/* <Navbar />
-        <Home />
-        <Support />
-        <SoonApp />
-        <Footer /> */}
-         {/* <SelectPlan /> */}
+    <Router>
+      <div className="App">
         <Routes>
-        {/* <Route path="/" element={() => <h1>Home</h1>} /> */}
-        <Route path="/profile" element={<ConfirmationScreen />} />
-      </Routes>
-        <Login />
-        {/* <BusReserve /> */}
-        {/* <RegisterUserForm /> */}
-        {/* <Signup />
-        {/* {/* 
-<Test />
-        
-        <UI/>
-        
-        <BookingForm /> 
-        
-        <UserForm /> 
-        <Info />
-        
-        <MyAC /> */}
+        <Route exact path="/" element={<Home/>} />
+          <Route exact path="/login" element={<Login/>} />
+          <Route exact path="/signup" element={<Signup/>} />
+          <Route exact path="/booking" element={<Booking/>} />
+        </Routes>
       </div>
-    </AuthProvider>
+    </Router>
   );
-};
+}
 
 export default App;

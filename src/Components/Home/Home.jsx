@@ -3,9 +3,12 @@ import React from "react";
 //imported assets
 import video from "..//..//assets/vdo4.mp4";
 import bus from "..//../assets/bus4.png";
+import Navbar from '../Navbar/Navbar'
 
 const Home = () => {
   return (
+    <>
+    <Navbar/>
     <div className="home flex container">
       <div className="Section_Home">
         <div className="space">Bhaarat Bus</div>
@@ -23,6 +26,7 @@ const Home = () => {
         <img src={bus} className="plane" />
       </div>
     </div>
+    </>
   );
 };
 

@@ -15,8 +15,7 @@ import Profile from "..//..//assets/bus1.png";
 import imageToShow from "..//../assets/p2.png";
 
 const Navbar = () => {
-  //lets remove navbar in the small screen device
-  const [isLoggedIn, setIsLogedIn] = useState(false);
+
   const [active, setActive] = useState("navBarMenu");
   const showNavBar = () => {
     setActive("navBarMenu showNavBar");
@@ -28,6 +27,13 @@ const Navbar = () => {
   //lets add the background color to the second navbar
 
   const [noBg, addBg] = useState("navBarTwo");
+  // Helper function to check if the user is authenticated
+const isAuthenticated = () => {
+  const token = sessionStorage.getItem('token');
+  return !!token; // Returns true if token exists, false otherwise
+};
+
+
   const addBgColor = () => {
     if (window.scrollY >= 10) {
       addBg("navBarTwo navbar_With_Bg");
@@ -66,7 +72,7 @@ const Navbar = () => {
           <h1>Bhaarat Bus</h1>
         </div>
 {
-  isLoggedIn ? (        <div className={active}>
+  isAuthenticated ? (        <div className={active}>
     <ul className="menu flex">
       <li onClick={removeNavBar} className="listItem">
         Home

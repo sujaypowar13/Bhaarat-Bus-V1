@@ -1,0 +1,92 @@
+/* Navbar.css */
+
+/* Common styles */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+/* Navbar container */
+.navBar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* NavbarOne styles */
+.navBarOne {
+  background-color: #a8dcf0; /* Set your background color */
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.navBarOne > div {
+  display: flex;
+  align-items: center;
+}
+
+.none,
+.atb {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .none {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .atb {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .navBarOne {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+}
+
+/* NavbarTwo styles */
+.navBarTwo {
+  background-color: #a8dcf0; /* Set your background color */
+  color: #fff; /* Set your text color */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.navbar_With_Bg {
+  background-color: #a4a2a2; /* Set your background color when scrolled */
+}
+
+.logoDiv {
+  flex: 1;
+}
+
+.Logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.btnTwo {
+  background-color: #fff; /* Set your button background color */
+  color: #c8baba; /* Set your button text color */
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.toggleIcon {
+  cursor: pointer;
+}
+
+/* Add any other styles as needed */

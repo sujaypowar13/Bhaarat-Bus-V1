@@ -5,6 +5,7 @@ import { SiConsul } from "react-icons/si";
 import { BsPhoneVibrateFill } from "react-icons/bs";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { CgMenuGridO } from "react-icons/cg";
+import "./nvbrCss.css"
 
 //imported images
 import logo from "..//..//assets/adidas1.png";
@@ -36,7 +37,7 @@ const Navbar = () => {
 
   return (
     <div className="navBar flex">
-      <div className="navBarOne flex">
+      {/* <div className="navBarOne flex">
         <div>
           <SiConsul className="icon" />
         </div>
@@ -55,38 +56,14 @@ const Navbar = () => {
           <span>Find my route</span>
           <span>Register for bus</span>
         </div>
-      </div>
+      </div> */}
 
       <div className={noBg}>
         <div className="logoDiv">
           <img src={logo} className="Logo" />
         </div>
 
-        <div className={active}>
-          <ul className="menu flex">
-            <li onClick={removeNavBar} className="listItem">
-              Home
-            </li>
-            <li onClick={removeNavBar} className="listItem">
-              About
-            </li>
-            <li onClick={removeNavBar} className="listItem">
-              Offers
-            </li>
-            <li onClick={removeNavBar} className="listItem">
-              Seats
-            </li>
-            <li onClick={removeNavBar} className="listItem">
-              Destinations
-            </li>
-          </ul>
-
-          <button onClick={removeNavBar} className="btn flex btnOne">
-            Contact
-          </button>
-        </div>
-
-        <button className="btn flex btnTwo">Contact</button>
+        <button className="btn flex btnTwo">Under Maintainance</button>
 
         <div onClick={showNavBar} className="toggleIcon">
           <CgMenuGridO />

@@ -1,4 +1,3 @@
-
 * {
   padding: 0;
   margin: 0;
@@ -152,13 +151,6 @@ h2 {
   width: 100%;
   z-index: 1000;
 
-  .navBarOne,
-  .navBarTwo {
-    justify-content: space-between;
-    padding: 1rem;
-    width: 100%;
-  }
-
   .navBarOne {
     background-color: var(--SecondaryColor);
     .icon:hover {
@@ -183,7 +175,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    top: 3rem;
+    // top: 2rem;
     padding: 1.5rem 1rem;
     position: fixed;
     transition: 0.3s ease-in-out;
@@ -197,10 +189,10 @@ h2 {
     @media screen and (max-width: 768px) {
       .navBarMenu {
         position: absolute;
+        margin-top: 27rem;
         background: var(--SecondaryColor);
         padding: 1.5rem;
         border-radius: 10px;
-        top: 5rem;
         right: -50%;
         width: 80%;
         transform: translateX(50%);
@@ -261,7 +253,7 @@ h2 {
 
 //home section styling
 .home {
-  padding-top: 10rem;
+  // padding-top: 10rem;
   text-align: center;
   gap: 2rem;
   flex-direction: column;
@@ -276,8 +268,8 @@ h2 {
   .homeImages {
     width: 100%;
     margin: 1rem auto 0; //it will change in wider screen
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     position: relative;
     border-radius: 5rem;
 
@@ -381,7 +373,7 @@ h2 {
 }
 //support section styling
 .support {
-  padding-top: 1rem;
+  padding-top: 4rem;
   .sectionContainer {
     .tittlesDiv {
       text-align: center;
@@ -428,15 +420,17 @@ h2 {
 
     .singleInfo {
       padding-top: 1.5rem;
+      border-radius: 4rem;
     }
   }
 
   .support_feature {
+    border-radius: 0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    border-radius: 15px; /* Add a rounded border for a modern look */
+    padding: 35px;
+    //border-radius: 15px; /* Add a rounded border for a modern look */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
     transition: box-shadow 0.3s ease; /* Smooth transition for box shadow on hover */
 
@@ -448,7 +442,7 @@ h2 {
     .imgDiv img {
       max-width: 100%;
       height: auto;
-      border-radius: 8px; /* Add rounded corners to the image */
+      border-radius: 5rem; /* Add rounded corners to the image */
       transition: transform 0.3s ease; /* Smooth transition for image scaling on hover */
 
       /* Hover effect for a subtle interaction */
@@ -477,6 +471,7 @@ h2 {
 
   @media screen and (max-width: 600px) {
     .support_feature {
+      border-radius: 2rem;
       padding: 15px;
     }
 
@@ -489,10 +484,13 @@ h2 {
 }
 
 //footer section styling
-
+.entireFooter {
+  padding-top: 30px;
+  margin: 10px 200px;
+}
 .footer {
+  padding: 25px;
   background: var(--SecondaryColor);
-
   .sectionContainer {
     gap: 2.5rem;
 
@@ -530,6 +528,7 @@ h2 {
     }
     .footerLinks {
       display: grid;
+      margin: auto;
 
       .linkTitle {
         color: var(--blackColor);
@@ -552,9 +551,8 @@ h2 {
   }
   .copyRightDiv {
     justify-content: center;
-    margin-top: 1.5rem;
-    padding: 1rem;
-    gap: 1rem;
+    margin-top: 2rem;
+    gap: 0rem;
     border-top: 1px solid var(--greyText);
     text-align: center;
   }
@@ -563,40 +561,56 @@ h2 {
 //SoonApp section styling
 
 .app_soon {
-  display: flex;
+  margin-left: 25%;
+  width: 900px;
   align-items: center;
-  justify-content: center;
-  width: auto;
-  height: auto; /* Make the component take the full height of the viewport */
+  background-color: #3498db; /* Choose your desired background color */
+  color: #fff; /* Text color */
+  font-size: 25px;
+  padding: 20px;
   text-align: center;
-  font-size: 2.5em; /* Set the font size */
-  margin: 0;
-  padding: auto; /* Add padding for better spacing */
-  background-color: var(--PrimaryColor); /* Set the background color */
-  color: #fff; /* Set the text color */
-  border-radius: 15px; /* Add rounded corners for a modern look */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow */
-  transition: background-color 0.3s ease; /* Smooth transition for background color change on hover */
+  border-radius: 10rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  letter-spacing: 15px;
+}
 
-  &:hover {
-    background-color: var(--colorOne); /* Adjust the hover background color */
-    transform: scale(1.05); /* Scale up on hover */
-  }
+/* Add a hover effect */
+.app_soon:hover {
+  background-color: #2980b9; /* Change the background color on hover */
+  transform: scale(1.05); /* Add a slight scale effect for interaction */
+}
 
-  &:focus {
-    outline: none; /* Remove the default focus outline */
-    background-color: #849aaa; /* Adjust the focus background color */
-    transform: scale(1.05); /* Scale up on focus */
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .app_soon {
+    font-size: 16px;
   }
 }
 
-//find my route styling
-
 //media screen styling
 @media screen and (max-width: 480px) {
+  //Navbar
+  .navBar {
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 15%;
+  }
+
   //home section only
   .home {
-    padding: 12rem;
+    padding-top: 35%;
+    .Section_Home {
+      font-weight: 600;
+      font-size: larger;
+      align-items: center;
+    }
+    .space {
+      padding: 10px 0px 10px 10px;
+      font-weight: 700;
+    }
   }
 
   //search section
@@ -609,14 +623,31 @@ h2 {
     }
   }
   //footer section styling
+
+  .entireFooter {
+    margin: auto;
+    width: auto;
+    padding: 0%;
+  }
   .footer {
     .sectionContainer {
-      align-items: flex-start;
-      grid-template-columns: repeat(2, 1fr);
+      align-items: start;
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0%;
+      margin: auto;
       .footerLinks {
         justify-content: center;
+        margin-left: 0%;
+        padding: 0px 0px;
       }
     }
+  }
+
+  //App soon styling
+  .app_soon {
+    width: auto;
+    letter-spacing: 0.1em;
+    margin: 15px;
   }
 }
 
@@ -812,6 +843,7 @@ h2 {
     .navBarTwo {
       .menu {
         gap: 1rem;
+        margin-left: -22rem;
 
         .listItem {
           padding: 0 1rem;
@@ -842,9 +874,9 @@ h2 {
   //navbar styling
   .navBar {
     .navBarTwo {
-      justify-content: center;
-      align-items: center;
-      padding: 0%;
+      padding-top: 0%;
+      padding-left: 2rem;
+      padding-right: 4rem;
 
       .logoDiv {
         //height: 100%;
@@ -853,14 +885,16 @@ h2 {
           padding-top: 0%;
           padding-bottom: 0%;
           max-width: 8%;
+          margin-right: 1rem;
           cursor: pointer;
         }
       }
       .menu {
         flex-direction: row;
-        gap: 0.7rem;
+        // gap: 0.7rem;
 
         .listItem {
+          // margin-right: 2rem;
           padding: 0.5rem;
           font-size: 14px;
           cursor: pointer;
@@ -883,8 +917,8 @@ h2 {
 
   //home section only
   .home {
-    padding-top: 0%;
-    padding-bottom: 8%;
+    padding-top: 10%;
+    padding-bottom: 1%;
     h4 {
       padding-top: 0%;
       font-size: large;
@@ -917,7 +951,7 @@ h2 {
 
   //search styling
   .search {
-    padding-top: 10%;
+    // padding-top: 10%;
     .sectionContainer {
       .btns {
         width: 30%;
@@ -942,23 +976,40 @@ h2 {
 
   .support {
     .sectionContainer {
+      .imgDiv img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 3rem;
+      }
+
+      .support_feature {
+        border-radius: 0rem;
+        padding: 15px;
+      }
+
       .infoDiv {
         padding: 2rem;
 
         .textDiv {
           margin-top: 2rem;
           grid-template-columns: repeat(3, 1fr);
-          column-gap: 3.5rem;
+          column-gap: 1.5rem;
         }
       }
     }
   }
 
   //footer
+
+  .entireFooter {
+    padding: 0px 0px 10px 0px;
+    cursor: pointer;
+  }
+
   .footer {
-    padding-top: 4rem;
+    padding: 1rem;
     .sectionContainer {
-      padding: auto;
+      padding: 0px;
 
       .socialIcon {
         size: 40px;

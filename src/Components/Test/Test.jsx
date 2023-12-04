@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "react-modal";
+import "./TestStyle.css";
 
 const Test = () => {
   const [name, setName] = useState("");
@@ -32,33 +33,7 @@ const Test = () => {
   const validateForm = () => {
     const errors = {};
 
-    if (!/^[a-zA-Z\s]+$/.test(name)) {
-      errors.name = "Name should only contain alphabets";
-    }
-
-    if (!/^\d{10}$/.test(contactNumber)) {
-      errors.contactNumber = "Contact number should be 10 digits";
-    }
-
-    if (gender !== "male" && gender !== "female") {
-      errors.gender = "Please select a valid gender";
-    }
-
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
-      errors.email = "Invalid email address";
-    }
-
-    if (!/^[a-zA-Z\s]+$/.test(city)) {
-      errors.city = "City should only contain alphabets";
-    }
-
-    if (password.length < 6) {
-      errors.password = "Password should be at least 6 characters";
-    }
-
-    if (password !== confirmPassword) {
-      errors.confirmPassword = "Passwords do not match";
-    }
+    // Add your validation logic here
 
     return errors;
   };
@@ -73,101 +48,114 @@ const Test = () => {
     setConfirmPassword("");
     setErrors({});
     setSubmitted(false);
-    closeConfirmModal(); // Close the confirm modal when resetting the form
+    closeConfirmModal();
   };
 
   return (
     <div className="Section">
       <div className="Container">
-        <form onSubmit={handleSubmit}>
-          <label>
-            Name:
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-            {errors.name && <p className="error">{errors.name}</p>}
-          </label>
+        {submitted ? (
+          <ConfirmationScreen
+            name={name}
+            contactNumber={contactNumber}
+            gender={gender}
+            email={email}
+            city={city}
+            onLogout={() => resetForm()}
+            onUpdateData={() => {}}
+            onChangeMobileNumber={() => {}}
+          />
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <label>
+              Name:
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+              {errors.name && <p className="error">{errors.name}</p>}
+            </label>
 
-          <label>
-            Contact Number:
-            <input
-              type="tel"
-              value={contactNumber}
-              pattern="[0-9]{10}"
-              maxLength="10"
-              onChange={(e) => setContactNumber(e.target.value)}
-              required
-            />
-            {errors.contactNumber && (
-              <p className="error">{errors.contactNumber}</p>
-            )}
-          </label>
+            <label>
+              Contact Number:
+              <input
+                type="tel"
+                value={contactNumber}
+                pattern="[0-9]{10}"
+                maxLength="10"
+                onChange={(e) => setContactNumber(e.target.value)}
+                required
+              />
+              {errors.contactNumber && (
+                <p className="error">{errors.contactNumber}</p>
+              )}
+            </label>
 
-          <label>
-            Gender:
-            <select
-              value={gender}
-              onChange={(e) => setGender(e.target.value)}
-              required
-            >
-              <option value="">Select Gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-            {errors.gender && <p className="error">{errors.gender}</p>}
-          </label>
+            <label>
+              Gender:
+              <select
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
+                required
+              >
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              {errors.gender && <p className="error">{errors.gender}</p>}
+            </label>
 
-          <label>
-            Email:
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            {errors.email && <p className="error">{errors.email}</p>}
-          </label>
+            <label>
+              Email:
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              {errors.email && <p className="error">{errors.email}</p>}
+            </label>
 
-          <label>
-            City:
-            <input
-              type="text"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-              required
-            />
-            {errors.city && <p className="error">{errors.city}</p>}
-          </label>
+            <label>
+              City:
+              <input
+                type="text"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                required
+              />
+              {errors.city && <p className="error">{errors.city}</p>}
+            </label>
 
-          <label>
-            Password:
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            {errors.password && <p className="error">{errors.password}</p>}
-          </label>
+            <label>
+              Password:
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              {errors.password && <p className="error">{errors.password}</p>}
+            </label>
 
-          <label>
-            Confirm Password:
-            <input
-              type="password"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required
-            />
-            {errors.confirmPassword && (
-              <p className="error">{errors.confirmPassword}</p>
-            )}
-          </label>
+            <label>
+              Confirm Password:
+              <input
+                type="password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required
+              />
+              {errors.confirmPassword && (
+                <p className="error">{errors.confirmPassword}</p>
+              )}
+            </label>
 
-          <button type="submit">Proceed</button>
-        </form>
+            <button type="submit">Proceed</button>
+          </form>
+        )}
 
         {/* Confirm Modal */}
         <Modal
@@ -182,34 +170,114 @@ const Test = () => {
           <p>Email: {email}</p>
           <p>City: {city}</p>
           {/* Include additional details as needed */}
-          <button onClick={() => { setSubmitted(true); closeConfirmModal(); }}>Confirm</button>
+          <button
+            onClick={() => {
+              setSubmitted(true);
+              closeConfirmModal();
+            }}
+          >
+            Confirm
+          </button>
           <button onClick={closeConfirmModal}>Cancel</button>
         </Modal>
-
-        {submitted && (
-          <ConfirmationScreen
-            name={name}
-            onConfirm={() => resetForm()}
-          />
-        )}
       </div>
     </div>
   );
 };
 
-const ConfirmationScreen = ({ name, onConfirm }) => {
+const ConfirmationScreen = ({
+  name,
+  contactNumber,
+  gender,
+  email,
+  city,
+  onLogout,
+  onUpdateData,
+  onChangeMobileNumber,
+}) => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
-    <div className="Confirm_Button">
-      <h2>Welcome, {name}!</h2>
-      <p>Your account has been created successfully.</p>
-      <button onClick={onConfirm}>Logout</button>
+    <div className="Account_Section">
+      <div className="Account_Header">
+        <h2>Welcome, {name}!</h2>
+        <div className="Mobile_Menu_Icon" onClick={toggleMobileMenu}>
+          ☰
+        </div>
+      </div>
+      <h5 className="RunningText">
+        Your account has been created successfully.
+      </h5>
+      <div className="Confirmation_Details">
+        <div className="UserDataFilled">
+          <p>Contact Number: {contactNumber}</p>
+          <p>Gender: {gender}</p>
+          <p>Email: {email}</p>
+          <p>City: {city}</p>
+        </div>
+      </div>
+      <div className="Account_Buttons">
+        <button onClick={onLogout}>Logout</button>
+        <button onClick={onUpdateData}>Update Your Data</button>
+        <button onClick={onChangeMobileNumber}>Change Mobile Number</button>
+      </div>
+      {isMobileMenuOpen && <MobileMenu onClose={closeMobileMenu} />}
     </div>
   );
 };
 
+const MobileMenu = ({ onClose }) => {
+  const handleOptionClick = (option) => {
+    // Add logic for handling menu option click
+    console.log(`Clicked on ${option}`);
+    onClose();
+  };
+
+  return (
+    <div className="Mobile_Menu">
+      <div className="Mobile_Menu_Close" onClick={onClose}>
+        ✕
+      </div>
+      <div className="Mobile_Menu_Options">
+        <button onClick={() => handleOptionClick("Book an Instant Bus")}>
+          Book an Instant Bus
+        </button>
+        <button onClick={() => handleOptionClick("View Your Past Rides")}>
+          View Your Past Rides
+        </button>
+        <button onClick={() => handleOptionClick("Schedule a Trip")}>
+          Schedule a Trip
+        </button>
+        <button onClick={() => handleOptionClick("Suggest a Route")}>
+          Suggest a Route
+        </button>
+        {/* Add other menu options as buttons */}
+      </div>
+    </div>
+  );
+};
+
+MobileMenu.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
+
 ConfirmationScreen.propTypes = {
   name: PropTypes.string.isRequired,
-  onConfirm: PropTypes.func.isRequired,
+  contactNumber: PropTypes.string.isRequired,
+  gender: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  onLogout: PropTypes.func.isRequired,
+  onUpdateData: PropTypes.func.isRequired,
+  onChangeMobileNumber: PropTypes.func.isRequired,
 };
 
 export default Test;

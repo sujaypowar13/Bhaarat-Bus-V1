@@ -6,6 +6,10 @@ import image3 from "..//..//assets/SR3.jpg";
 import image4 from "..//..//assets/SR4.jpeg";
 import image5 from "..//..//assets/SR5.jpeg";
 import image6 from "..//..//assets/SR6.jpeg";
+import BusTrack from "..//../assets/Dedicated_Route.png";
+import MornTime from "..//../assets/Morning_Time.jpg";
+import EveTime from "..//../assets/Evening_Time.jpg";
+
 
 //importing images
 
@@ -24,6 +28,35 @@ const Support = () => {
 
         <div className="infoDiv grid">
           <div className="textDiv grid">
+            <div className="support_feature">
+              <div className="imgDiv">
+                <img src={BusTrack} alt="" />
+              </div>
+
+              <div className="singleInfo">
+                <span className="number colorOne">Bus Route</span>
+              </div>
+            </div>
+            <div className="support_feature">
+              <div className="imgDiv">
+                <img src={MornTime} alt="" />
+              </div>
+
+              <div className="singleInfo">
+                <span className="number colorOne">Morning Time</span>
+              </div>
+            </div>
+
+            <div className="support_feature">
+              <div className="imgDiv">
+                <img src={EveTime} alt="" />
+              </div>
+
+              <div className="singleInfo">
+                <span className="number colorOne">Evening Time</span>
+              </div>
+            </div>
+
             <div className="support_feature">
               <div className="imgDiv">
                 <img src={image1} alt="" />
@@ -113,7 +146,6 @@ const Support = () => {
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
